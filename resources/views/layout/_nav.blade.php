@@ -40,8 +40,28 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{route('member.index')}}">用户列表</a></li>
                         <li><a href="{{route('member.bidden')}}">被禁用用户列表</a></li>
+                        <li><a href="{{route('admin.add')}}">添加用户</a></li>
                     </ul>
                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">权限角色管理 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{route('power.add')}}">添加权限</a></li>
+                        <li><a href="{{route('power.index')}}">权限列表</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{route('role.create')}}">添加角色</a></li>
+                        <li><a href="{{route('role.index')}}">角色角色列表</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">菜单管理<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{route('nav.index')}}">菜单列表</a></li>
+                        <li><a href="{{route('nav.create')}}">添加菜单</a></li>
+                    </ul>
+                </li>
+
+                {!! \App\Models\Nav::getNavs() !!}
                 @endauth
             </ul>
             <ul class="nav navbar-nav navbar-right">

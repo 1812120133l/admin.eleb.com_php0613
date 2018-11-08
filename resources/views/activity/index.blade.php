@@ -34,6 +34,6 @@
                         <button class="btn btn-danger">删除</button>
                     </form> </td>
             </tr>
-            @endforeach
+        @endforeach
     </table>
 @stop

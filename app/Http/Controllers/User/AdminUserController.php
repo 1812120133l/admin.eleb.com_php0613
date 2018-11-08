@@ -96,4 +96,5 @@ class AdminUserController extends Controller
 
         return redirect()->route('user.index')->with('success','修改成功');
     }
+
 }
